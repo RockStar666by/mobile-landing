@@ -13,43 +13,74 @@ const stylesHandler = isProduction
 const config = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   devServer: {
     open: true,
-    host: 'localhost'
+    host: 'localhost',
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'index.html'
-    })
+      template: './src/index.html',
+    }),
 
     // Add your plugins here
     // Learn more about plugins from https://webpack.js.org/configuration/plugins/
   ],
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/i,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader']
+        use: [
+          stylesHandler,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+          {
+            loader: 'sass-resources-loader',
+            options: {
+              resources: ['src/styles/vars.scss'],
+            },
+          },
+        ],
       },
       {
         test: /\.css$/i,
-        use: [stylesHandler, 'css-loader', 'postcss-loader']
+        use: [stylesHandler, 'css-loader', 'postcss-loader'],
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-        type: 'asset'
-      }
+        type: 'asset',
+        generator: {
+          filename: 'static/[hash][ext][query]',
+        },
+      },
+      {
+        test: /\.html$/i,
+        loader: 'html-loader',
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        resolve: {
+          extensions: ['.js', '.ts'],
+        },
+        use: {
+          loader: 'babel-loader',
+        },
+      },
 
       // Add your rules for custom modules here
       // Learn more about loaders from https://webpack.js.org/loaders/
-    ]
-  }
+    ],
+  },
 };
 
 module.exports = () => {

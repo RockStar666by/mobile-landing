@@ -1,0 +1,36 @@
+.footer {
+  height: 42px;
+  margin: 16px 24px 38px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.linksContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.autoRenewable {
+  margin: 0;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-align: center;
+  color: $main-color;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+
+.footerLink {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 13px;
+  text-decoration-line: underline;
+  color: $footer-link-color;
+}

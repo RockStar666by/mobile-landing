@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'SF Pro';
-  src: url(55156bcbc0fd9bdb6873.ttf) format('truetype');
+  src: url(static/55156bcbc0fd9bdb6873.ttf) format('truetype');
 }
 
-body{font-family:"SF Pro";background:url(a94694325dd887a6b861.png)}
+.submitButton{display:flex;margin:0 auto;width:280px;height:54px;font-family:"SF Pro";font-size:17px;align-items:center;justify-content:center;line-height:17px;text-align:center;color:#fff;background:linear-gradient(270deg, #1987ff 0%, #19ccff 100%);border:none;border-radius:27px}html{font-family:"SF Pro";background:-webkit-image-set(url(static/eee00c8f3ed67b4f816f.png) 1x, url(static/a94694325dd887a6b861.png) 2x, url(static/4b2d9495bf03acbcdaf4.png) 3x) no-repeat;background-size:cover}

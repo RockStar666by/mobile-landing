@@ -1,12 +1,12 @@
 import i18n from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-import TRANSLATION_EN from './translations/en';
-import TRANSLATION_ES from './translations/es';
-import TRANSLATION_FR from './translations/fr';
-import TRANSLATION_JA from './translations/ja';
-import TRANSLATION_NL from './translations/nl';
-import TRANSLATION_RU from './translations/ru';
-import TRANSLATION_ZH from './translations/zh';
+import TRANSLATION_EN from './translations/en.json';
+import TRANSLATION_ES from './translations/es.json';
+import TRANSLATION_FR from './translations/fr.json';
+import TRANSLATION_JA from './translations/ja.json';
+import TRANSLATION_NL from './translations/nl.json';
+import TRANSLATION_RU from './translations/ru.json';
+import TRANSLATION_ZH from './translations/zh.json';
 
 i18n.use(LanguageDetector).init({
   detection: {
@@ -19,7 +19,7 @@ i18n.use(LanguageDetector).init({
       'navigator',
       'htmlTag',
       'path',
-      'subdomain'
+      'subdomain',
     ],
 
     // keys or params to lookup language from
@@ -42,39 +42,39 @@ i18n.use(LanguageDetector).init({
     htmlTag: document.documentElement,
 
     // optional set cookie options, reference:[MDN Set-Cookie docs](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)
-    cookieOptions: { path: '/', sameSite: 'strict' }
+    cookieOptions: { path: '/', sameSite: 'strict' },
   },
   fallbackLng: 'en',
   resources: {
     en: {
-      translation: TRANSLATION_EN
+      translation: TRANSLATION_EN,
     },
     es: {
-      translation: TRANSLATION_ES
+      translation: TRANSLATION_ES,
     },
     fr: {
-      translation: TRANSLATION_FR
+      translation: TRANSLATION_FR,
     },
     ja: {
-      translation: TRANSLATION_JA
+      translation: TRANSLATION_JA,
     },
     nl: {
-      translation: TRANSLATION_NL
+      translation: TRANSLATION_NL,
     },
     ru: {
-      translation: TRANSLATION_RU
+      translation: TRANSLATION_RU,
     },
     zh: {
-      translation: TRANSLATION_ZH
-    }
-  }
+      translation: TRANSLATION_ZH,
+    },
+  },
 });
 
 const localize = i18n.t.bind(i18n);
 const Localization = Object.keys(TRANSLATION_EN).reduce(
   (a, key) => ({
     ...a,
-    [key]: key
+    [key]: key,
   }),
   {}
 );

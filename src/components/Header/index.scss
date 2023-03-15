@@ -1,0 +1,32 @@
+.header {
+  height: 24px;
+  display: flex;
+  margin: 40px 20px auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close:before,
+.close:after {
+  content: '';
+  position: absolute;
+  width: 21px;
+  height: 2px;
+  background: $header-close-color;
+  mix-blend-mode: difference;
+  border-radius: 1px;
+}
+.close:before {
+  transform: rotate(45deg);
+}
+.close:after {
+  transform: rotate(-45deg);
+}
+
+.restore {
+  font-family: 'SF Pro';
+  font-size: 13px;
+  line-height: 41px;
+  text-decoration: none;
+  color: $header-restore-color;
+}

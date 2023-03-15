@@ -1,0 +1,77 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 147px;
+  height: 180px;
+  background: url(../../assets/shape-2.svg) no-repeat;
+  background-size: cover;
+  color: $main-color;
+  transition: all ease-in-out 0.3s;
+}
+
+.monthly {
+  background: url(../../assets/shape-1.svg) no-repeat;
+  background-size: cover;
+}
+
+.disabled {
+  transform: scale(0.9, 0.9);
+}
+
+.cardTitle {
+  margin: 25px 0 10px;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.price {
+  text-align: center;
+  font-size: 15px;
+}
+
+.description {
+  position: absolute;
+  top: 115px;
+  width: 102%;
+  height: 22px;
+
+  font-size: 15px;
+  line-height: 22px;
+  text-align: center;
+  background: #495795;
+}
+
+.pricePerMonth {
+  position: absolute;
+  bottom: 7%;
+  margin: 5px 0;
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.percentage {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  right: 0;
+  top: 0;
+  width: 36px;
+  height: 36px;
+  background: $circle;
+  border-radius: 20px;
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
+
+strong {
+  font-size: 24px;
+  line-height: 30px;
+}

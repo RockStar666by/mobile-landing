@@ -1,0 +1,16 @@
+.submitButton {
+  display: flex;
+  margin: 0 auto;
+  width: 280px;
+  height: 54px;
+  font-family: 'SF Pro';
+  font-size: 17px;
+  align-items: center;
+  justify-content: center;
+  line-height: 17px;
+  text-align: center;
+  color: $main-color;
+  background: $button-bg;
+  border: none;
+  border-radius: 27px;
+}
