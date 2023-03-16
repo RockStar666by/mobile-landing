@@ -29,21 +29,21 @@ export const Card = ({ period, state, link }) => {
   }
 
   if (cardElement.classList.contains('monthly')) {
-    cardTitle.setHTML(localize(Localization['Monthly']));
-    price.setHTML(
-      localize('<strong>{{price}}</strong><br>per month', { price: '$9.99' })
-    );
-    description.setHTML(localize(Localization['3 DAYS FREE']));
-    pricePerMonth.setHTML(localize('{{price}}/month', { price: '$9.99' }));
+    cardTitle.innerHTML = localize(Localization['Monthly']);
+    price.innerHTML = localize('<strong>{{price}}</strong><br>per month', {
+      price: '$9.99',
+    });
+    description.innerHTML = localize(Localization['3 DAYS FREE']);
+    pricePerMonth.innerHTML = localize('{{price}}/month', { price: '$9.99' });
   } else {
-    percentage.setHTML(localize(Localization['-83%']));
+    percentage.innerHTML = localize(Localization['-83%']);
     percentage.classList.add('visible');
-    cardTitle.setHTML(localize(Localization['Annually']));
-    price.setHTML(
-      localize('<strong>{{price}}</strong><br>per year', { price: '$19.99' })
-    );
-    description.setHTML(localize(Localization['MOST POPULAR']));
-    pricePerMonth.setHTML(localize('{{price}}/month', { price: '$1.66' }));
+    cardTitle.innerHTML = localize(Localization['Annually']);
+    price.innerHTML = localize('<strong>{{price}}</strong><br>per year', {
+      price: '$19.99',
+    });
+    description.innerHTML = localize(Localization['MOST POPULAR']);
+    pricePerMonth.innerHTML = localize('{{price}}/month', { price: '$1.66' });
   }
 
   return cardElement;

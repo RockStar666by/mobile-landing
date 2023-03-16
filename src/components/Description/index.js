@@ -6,9 +6,9 @@ import './index.scss';
 export const Description = () => {
   const descriptionElement = htmlToElement(description);
   const children = descriptionElement.querySelectorAll('.descriptionListItem');
-  children[0].setHTML(localize(Localization['Unlimited documents']));
-  children[1].setHTML(localize(Localization['Count mode']));
-  children[2].setHTML(localize(Localization['Text recognition (OCR)']));
+  children[0].innerHTML = localize(Localization['Unlimited documents']);
+  children[1].innerHTML = localize(Localization['Count mode']);
+  children[2].innerHTML = localize(Localization['Text recognition (OCR)']);
 
   return descriptionElement;
 };

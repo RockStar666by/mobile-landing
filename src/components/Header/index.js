@@ -6,7 +6,7 @@ import './index.scss';
 export const Header = () => {
   const headerElement = htmlToElement(header);
   const restoreButton = headerElement.querySelector('.restore');
-  restoreButton.setHTML(localize(Localization['Restore']));
+  restoreButton.innerHTML = localize(Localization['Restore']);
 
   return headerElement;
 };

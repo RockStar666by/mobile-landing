@@ -10,6 +10,6 @@ export const SubmitButton = () => {
     'click',
     () => (window.location.href = `${store.link}`)
   );
-  submitButtonElement.setHTML(localize(Localization['Continue']));
+  submitButtonElement.innerHTML = localize(Localization['Continue']);
   return submitButtonElement;
 };

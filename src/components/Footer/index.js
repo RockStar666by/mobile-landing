@@ -9,11 +9,11 @@ export const Footer = () => {
   const terms = footerElement.querySelector('.termsOfUse');
   const privacy = footerElement.querySelector('.privacyPolicy');
 
-  autoRenewable.setHTML(
-    localize(Localization['Auto-renewable. Cancel anytime.'])
+  autoRenewable.innerHTML = localize(
+    Localization['Auto-renewable. Cancel anytime.']
   );
-  terms.setHTML(localize(Localization['Terms of Use']));
-  privacy.setHTML(localize(Localization['Privacy Policy']));
+  terms.innerHTML = localize(Localization['Terms of Use']);
+  privacy.innerHTML = localize(Localization['Privacy Policy']);
 
   return footerElement;
 };

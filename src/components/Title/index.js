@@ -6,13 +6,15 @@ import i18next from 'i18next';
 
 export const Title = () => {
   const titleElement = htmlToElement(title);
-  titleElement.setHTML(
-    localize(Localization['Unlimited Access<br>to All Features'])
+  titleElement.innerHTML = localize(
+    Localization['Unlimited Access<br>to All Features']
   );
 
   if (['fr', 'es', 'ru'].includes(i18next.language)) {
     titleElement.style.fontSize = '28px';
   }
+
+  console.log(i18next.language);
 
   return titleElement;
 };
