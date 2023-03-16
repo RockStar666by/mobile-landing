@@ -3,13 +3,6 @@
 
 html {
   font-family: 'SF Pro', 'Arial', sans-serif;
-  background: -webkit-image-set(
-      url('./assets/4.png') 1x,
-      url('./assets/4@2x.png') 2x,
-      url('./assets/4@3x.png') 3x
-    )
-    no-repeat;
-  background-size: cover;
 }
 
 p {
@@ -18,7 +11,8 @@ p {
 
 #root {
   height: 100vh;
-  margin: 0;
+  max-width: 600px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

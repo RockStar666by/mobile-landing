@@ -7,6 +7,6 @@ export const Header = () => {
   const headerElement = htmlToElement(header);
   const restoreButton = headerElement.querySelector('.restore');
   restoreButton.setHTML(localize(Localization['Restore']));
-  console.log(headerElement);
+
   return headerElement;
 };

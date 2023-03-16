@@ -2,12 +2,17 @@ import { htmlToElement } from '../../utils/htmlToElement';
 import { localize, Localization } from '../../localization/i18n';
 import title from './index.html';
 import './index.scss';
+import i18next from 'i18next';
 
 export const Title = () => {
   const titleElement = htmlToElement(title);
   titleElement.setHTML(
     localize(Localization['Unlimited Access<br>to All Features'])
   );
-  console.log(titleElement);
+
+  if (['fr', 'es', 'ru'].includes(i18next.language)) {
+    titleElement.style.fontSize = '28px';
+  }
+
   return titleElement;
 };

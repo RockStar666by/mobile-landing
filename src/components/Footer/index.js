@@ -8,11 +8,12 @@ export const Footer = () => {
   const autoRenewable = footerElement.querySelector('.autoRenewable');
   const terms = footerElement.querySelector('.termsOfUse');
   const privacy = footerElement.querySelector('.privacyPolicy');
+
   autoRenewable.setHTML(
     localize(Localization['Auto-renewable. Cancel anytime.'])
   );
   terms.setHTML(localize(Localization['Terms of Use']));
   privacy.setHTML(localize(Localization['Privacy Policy']));
-  console.log(footerElement);
+
   return footerElement;
 };

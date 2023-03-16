@@ -5,7 +5,11 @@ import './index.scss';
 
 export const CardContainer = () => {
   const cardContainerElement = htmlToElement(cardContainer);
-  cardContainerElement.append(Card({ period: 'monthly' }));
-  cardContainerElement.append(Card({ period: 'annually', state: 'disabled' }));
+  cardContainerElement.append(
+    Card({ period: 'monthly', link: 'https://apple.com/' })
+  );
+  cardContainerElement.append(
+    Card({ period: 'annually', state: 'disabled', link: 'https://google.com/' })
+  );
   return cardContainerElement;
 };

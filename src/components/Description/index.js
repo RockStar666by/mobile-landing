@@ -9,6 +9,6 @@ export const Description = () => {
   children[0].setHTML(localize(Localization['Unlimited documents']));
   children[1].setHTML(localize(Localization['Count mode']));
   children[2].setHTML(localize(Localization['Text recognition (OCR)']));
-  console.log(descriptionElement, children);
+
   return descriptionElement;
 };
