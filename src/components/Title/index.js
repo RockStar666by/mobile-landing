@@ -10,11 +10,13 @@ export const Title = () => {
     Localization['Unlimited Access<br>to All Features']
   );
 
-  if (['fr', 'es', 'ru'].includes(i18next.language)) {
+  if (
+    ['fr', 'es', 'ru'].includes(i18next.language.substring(0, 2).toLowerCase())
+  ) {
     titleElement.style.fontSize = '28px';
   }
 
-  console.log(i18next.language);
+  console.log(i18next.language, i18next.language.substring(0, 2).toLowerCase());
 
   return titleElement;
 };

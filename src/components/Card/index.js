@@ -23,7 +23,7 @@ export const Card = ({ period, state, link }) => {
   const description = cardElement.querySelector('.description');
   const pricePerMonth = cardElement.querySelector('.pricePerMonth');
 
-  if (['fr'].includes(i18next.language)) {
+  if (['fr'].includes(i18next.language.substring(0, 2).toLowerCase())) {
     cardTitle.style.fontSize = '14px';
     description.style.fontSize = '13px';
   }
